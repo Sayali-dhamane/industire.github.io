@@ -11,6 +11,27 @@ body {
   background: #000;
   color: #fff; }
 
+  .offcanvas-body ul li a {
+    /* text-decoration: none; */
+    /* color: rgb(48, 48, 48); */
+    /* font-size: 1.5rem; */
+    padding: 10px 10px;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 15px;
+    line-height: 4;
+    /* margin-bottom: 50px; */
+    /* margin: 81px 10px; */
+    text-decoration: none !important;
+}
+
+.offcanvas-body ul li a:hover {
+  color:  rgb(9, 9, 10);
+  font-weight: bolder;
+  text-decoration:double;
+}
+
 ::selection {
   background: #000;
   color: #fff; }
@@ -198,12 +219,21 @@ a {
 .site-navbar {
   margin-bottom: 0px;
   width: 100%;
+  height: 94px;
   border-bottom: none; }
   .site-navbar .site-logo {
     font-weight: 200; }
     .site-navbar .site-logo a {
-      font-weight: 200;
-      color: #000; }
+      /* font-weight: 200; */
+      font-size: 36px;
+      font-family: fantasy;
+      color: #000;
+    text-decoration: none; }
+
+      .site-navbar .site-logo a:hover {
+        transform: scale(1.1);
+        text-decoration: underline;
+      }
   .site-navbar .site-navigation .site-menu {
     margin-bottom: 0; }
     .site-navbar .site-navigation .site-menu .active > a {
@@ -216,14 +246,18 @@ a {
       display: inline-block;
       padding: 10px 5px; }
       .site-navbar .site-navigation .site-menu > li > a {
-        padding: 10px 10px;
+        padding: 27px 10px;
         text-transform: uppercase;
         letter-spacing: .05em;
         color: rgba(0, 0, 0, 0.6);
-        font-size: 15px;
+        font-size: 17px;
+        font-weight: 500;
         text-decoration: none !important; }
         .site-navbar .site-navigation .site-menu > li > a:hover {
-          color: #000; }
+          color: #000; 
+          font-weight: bolder;
+        text-decoration: underline;
+        }
       .site-navbar .site-navigation .site-menu > li:last-child {
         padding-right: 0; }
         .site-navbar .site-navigation .site-menu > li:last-child > a {
@@ -317,6 +351,30 @@ a {
           margin-top: 0px;
           visibility: visible;
           opacity: 1; }
+@media (max-width: 768px) {
+  .site-mobile-menu {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #fff;
+  }
+  
+  .site-mobile-menu-body {
+    padding: 20px;
+  }
+  
+  .site-mobile-menu-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
 
 .site-mobile-menu {
   width: 300px;
